@@ -1,0 +1,13 @@
+/* bug.css */
+.container {
+  width: calc(100%-10px); /* Incorrect, missing space */
+  height: calc(50%+10em); /* Incorrect, incompatible units */
+}
+
+/* bugSolution.css */
+.container {
+  width: calc(100% - 10px); /* Correct spacing */
+  height: calc(50% + 100px); /* Correct units */
+  /*Or adjust to ensure units are compatible in the calculation*/
+  /* Example height: calc(50vh + 10em) if viewport height (vh) works well */
+}
